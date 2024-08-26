@@ -1,0 +1,1046 @@
+/* General Styles */
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #262729;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+/*--------------------------------------------------------------------------------------------->*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 40px;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    padding-left: 3rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #0056b3;
+    text-shadow: 0px 0px 5px rgba(0, 91, 187, 0.7);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.7);
+}
+
+.btn-dark {
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Navbar Hover Animation */
+.navbar {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .btn-dark {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------->*/
+
+/* Profile Card */
+.profile-card {
+    background-color: #696464; /* White background for better contrast */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.profile-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card img {
+    border-radius: 50%;
+    border: 6px solid #007bff;
+    padding: 5px;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.profile-card img:hover {
+    border-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.profile-card h2 {
+    font-size: 28px;
+    color: #f9f6f6;
+    font-weight: bold;
+    margin: 15px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.profile-card p {
+    font-size: 16px;
+    color: #f6f2f2;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Icon Buttons */
+.icon-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.icon-btn:hover {
+    background-color: #78b8f8;
+    transform: scale(1.2);
+}
+
+/* Social Media Icons */
+.profile-card .fab {
+    font-size: 50px;
+    color: #dfe4e8;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.profile-card .fab:hover {
+    color: #efebeb;
+    transform: scale(1.2);
+}
+
+.profile-card .mt-3 {
+    margin-top: 30px;
+}
+
+/* Download Button */
+.download-button {
+    display: inline-block;
+    background-color: #5aa4ee;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.download-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 30%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.download-button:hover::after {
+    opacity: 1;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-card img {
+        width: 300px;
+    height: 300px;
+    }
+
+    .icon-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .profile-card .fab {
+        font-size: 24px;
+    }
+
+    .download-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------------->*/
+/* Recent Projects */
+/* Recent Projects */
+.recent-projects {
+    background-color: #bedefd; /* Light grey background for better contrast */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.recent-projects h3 {
+    font-size: 2.5rem; /* Increased size for emphasis */
+    color: #343a40; /* Darker color for better readability */
+    margin-bottom: 30px;
+    border-bottom: 3px solid #007bff; /* Added accent color for visual interest */
+    padding-bottom: 10px;
+    font-weight: 700; /* Bold font weight */
+    text-transform: uppercase; /* Uppercase for a more formal look */
+}
+
+.recent-projects .d-flex {
+    margin-bottom: 30px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef; /* Light border for definition */
+    border-radius: 10px;
+    padding: 15px; /* Padding inside the project item */
+}
+
+.recent-projects .d-flex:hover {
+    transform: translateY(-8px); /* Slightly more noticeable hover effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.recent-projects img {
+    max-width: 200px; /* Increased max-width for better image visibility */
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recent-projects h5 {
+    font-size: 1.75rem; /* Larger size for project titles */
+    color: #343a40;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.recent-projects p {
+    color: #6c757d;
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Slightly tighter line-height for readability */
+}
+
+.recent-projects a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.recent-projects a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .recent-projects img {
+        max-width: 150px; /* Adjusted image size for smaller screens */
+    }
+
+    .recent-projects h3 {
+        font-size: 2rem; /* Adjusted font size for headings */
+    }
+
+    .recent-projects h5 {
+        font-size: 1.5rem; /* Adjusted font size for project titles */
+    }
+
+    .recent-projects p {
+        font-size: 1rem; /* Adjusted font size for paragraphs */
+    }
+}
+
+
+
+/*--------------------------------------------------------------------------------------------->*/
+
+/* Education Section Styles */
+#education {
+    padding: 60px 0;
+    background: #c8c7c7;
+}
+
+#education h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#education h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Education Item Styles */
+.education-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #007bff;
+    transition: background 0.3s;
+}
+
+.education-item:hover::before {
+    background: #0056b3;
+}
+
+.education-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #eaf4ff;
+}
+
+.education-item h4 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #007bff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.education-item h4:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+.education-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.education-item p strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education-item:nth-child(1) {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+}
+
+.education-item:nth-child(2) {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+}
+
+.education-item:nth-child(3) {
+    animation: fadeIn 0.6s ease-out 0.5s forwards;
+}
+
+.education-item:nth-child(4) {
+    animation: fadeIn 0.6s ease-out 0.7s forwards;
+}
+
+/*--------------------------------------------------------------------------------------------->*/
+/* Expert Area Styles */
+.expert-area {
+    padding: 60px 0;
+    background-color: #f4f9fc;
+    position: relative;
+    text-align: center; /* Center text and badges */
+}
+
+.expert-area::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    z-index: -1;
+}
+
+/* Title Styles */
+.expert-area h3 {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.expert-area h3::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Badge Container Styles */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Badge Styling */
+.badge {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 15px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+    margin: 10px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.badge:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    border-color: #007bff;
+}
+
+.icon-img {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.badge:hover .icon-img {
+    transform: scale(1.2);
+    filter: brightness(0) invert(1);
+}
+
+/* Border Indicator */
+.badge::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+}
+
+.badge:hover::before {
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .badge {
+        font-size: 14px;
+        padding: 12px 15px;
+        margin: 8px;
+    }
+
+    .icon-img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .expert-area h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .badge {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .icon-img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------->*/
+/* Services Section */
+.services {
+    padding: 60px 0;
+    background-color: #6c757d;
+    text-align: center; /* Center text and content */
+}
+
+.services h3 {
+    font-size: 36px;
+    color: #0a0a0a;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    padding-bottom: 10px;
+    /* Remove unnecessary padding-left */
+}
+
+
+.services h3::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Service Card Container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Service Card Styles */
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border-color 0.3s;
+    text-align: center; /* Center text inside card */
+    max-width: 280px; /* Restrict card width */
+    margin: 15px; /* Spacing between cards */
+    position: relative;
+    overflow: hidden; /* Ensure the border-radius is visible */
+}
+
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa; /* Light background on hover */
+    border-color: #007bff; /* Border color change on hover */
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.1); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-title {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Icon Styles */
+.service-card i {
+    color: #007bff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.service-card:hover i {
+    color: #0056b3;
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services h3 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .service-card {
+        padding: 15px;
+        max-width: 250px;
+    }
+
+    .service-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .service-card {
+        padding: 10px;
+        max-width: 220px;
+    }
+
+    .service-title {
+        font-size: 14px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------------------------------------->*/
+/* Contact Section */
+#contact {
+    background-color: #6c757d;
+    padding: 60px 0;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 10px;
+    color: #e9ecef; /* Light color for heading */
+}
+
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff; /* Blue underline */
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+#contactForm .form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e9ecef; /* Light color for labels */
+}
+
+#contactForm .form-control {
+    border-radius: 8px;
+    border: 1px solid #495057;
+    background-color: #343a40; /* Dark input background */
+    color: #ffffff; /* Input text color */
+    padding: 15px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#contactForm .form-control::placeholder {
+    color: #6c757d; /* Placeholder text color */
+}
+
+#contactForm .form-control:focus {
+    border-color: #007bff; /* Border color on focus */
+    background-color: #495057; /* Darker background on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+#contactForm .btn-dark {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#contactForm .btn-dark:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+#responseMessage {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745; /* Success message color */
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 30px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
+
+    #contactForm .form-label {
+        font-size: 14px;
+    }
+
+    #contactForm .form-control {
+        font-size: 14px;
+    }
+
+    #contactForm .btn-dark {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    #contact p {
+        font-size: 14px;
+    }
+
+    #contactForm .form-label {
+        font-size: 12px;
+    }
+
+    #contactForm .form-control {
+        font-size: 12px;
+    }
+
+    #contactForm .btn-dark {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------->*/
+
+/* Footer Section */
+#footer {
+    background-color: #2b2f33; /* Darker gray for contrast */
+    color: #ffffff; /* White text */
+    padding: 50px 20px; /* Added horizontal padding */
+    font-size: 15px;
+}
+
+#footer h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #f1f1f1; /* Lighter gray for headings */
+    position: relative;
+}
+
+#footer h5::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    /* Blue underline for headings */
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+#footer p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #dcdcdc; /* Softer gray for text */
+}
+
+#footer ul {
+    padding: 0;
+    list-style-type: none;
+    line-height: 2;
+}
+
+#footer ul li {
+    margin-bottom: 12px;
+}
+
+#footer ul li a {
+    color: #f1f1f1; /* Lighter gray for links */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#footer ul li a:hover {
+    color: #007bff; /* Blue on hover */
+    text-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5); /* Soft glow on hover */
+}
+
+#footer ul li i {
+    margin-right: 12px;
+    color: #007bff; /* Blue icons */
+}
+
+/* Centered Copyright Text */
+#footer .text-center p {
+    font-size: 14px;
+    color: #adb5bd; /* Medium gray text for copyright */
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #4f4f4f; /* Light border to separate from the rest of the footer */
+    letter-spacing: 0.5px; /* Slightly increase letter spacing */
+}
+
+/* Copyright Links */
+#footer .text-center p a {
+    color: #f8f9fa; /* Light gray for any links within the copyright */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer .text-center p a:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+/* Social Media Icons */
+#footer .social-icons {
+    margin-top: 20px;
+    text-align: center; /* Centered icons */
+}
+
+#footer .social-icons a {
+    color: #ffffff;
+    margin: 0 15px; /* Increased margin for spacing */
+    font-size: 24px; /* Larger font size */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#footer .social-icons a:hover {
+    color: #007bff; /* Blue on hover */
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #footer {
+        text-align: center; /* Centered text for medium screens */
+    }
+
+    #footer .row > div {
+        margin-bottom: 40px;
+    }
+
+    #footer ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer h5 {
+        font-size: 18px;
+    }
+
+    #footer p, #footer ul li {
+        font-size: 13px; /* Smaller font size for better fit */
+    }
+}
+
+@media (max-width: 576px) {
+    #footer {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #footer h5 {
+        font-size: 16px; 
+
+    #footer p, #footer ul li {
+        font-size: 12px; 
+    }
+
+    #footer .social-icons a {
+        font-size: 20px; 
+    }
+}
+}
