@@ -323,7 +323,7 @@ body {
 }
 
 .recent-projects img {
-    max-width: 200px; /* Increased max-width for better image visibility */
+    max-width: 180px; /* Increased max-width for better image visibility */
     border-radius: 10px;
     margin-right: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
